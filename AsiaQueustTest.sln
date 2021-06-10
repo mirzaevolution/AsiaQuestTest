@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31229.75
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsiaQuest.WebApp", "AsiaQuest.WebApp\AsiaQuest.WebApp.csproj", "{E85E7C1C-E2DC-4C1C-86B8-F038465031FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsiaQuest.DataAccessLayer", "AsiaQuest.DataAccessLayer\AsiaQuest.DataAccessLayer.csproj", "{5DFE43AC-385D-485C-8015-2F697EC38BCA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsiaQuest.Services", "AsiaQuest.Services\AsiaQuest.Services.csproj", "{584B473A-A928-46DB-90E0-96841363BD09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsiaQuest.Repositories", "AsiaQuest.Repositories\AsiaQuest.Repositories.csproj", "{0F40D837-D4EF-40B4-9312-5EFDF9F20F49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsiaQuest.DataTransferObjects", "AsiaQuest.DataTransferObjects\AsiaQuest.DataTransferObjects.csproj", "{34D5CC78-8146-437C-A220-2963DDBE8E86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsiaQuest.BusinessObjects", "AsiaQuest.BusinessObjects\AsiaQuest.BusinessObjects.csproj", "{AFF994BD-EE48-432E-B30E-76FA020B9331}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E85E7C1C-E2DC-4C1C-86B8-F038465031FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E85E7C1C-E2DC-4C1C-86B8-F038465031FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E85E7C1C-E2DC-4C1C-86B8-F038465031FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E85E7C1C-E2DC-4C1C-86B8-F038465031FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DFE43AC-385D-485C-8015-2F697EC38BCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DFE43AC-385D-485C-8015-2F697EC38BCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DFE43AC-385D-485C-8015-2F697EC38BCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DFE43AC-385D-485C-8015-2F697EC38BCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{584B473A-A928-46DB-90E0-96841363BD09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{584B473A-A928-46DB-90E0-96841363BD09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{584B473A-A928-46DB-90E0-96841363BD09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{584B473A-A928-46DB-90E0-96841363BD09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F40D837-D4EF-40B4-9312-5EFDF9F20F49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F40D837-D4EF-40B4-9312-5EFDF9F20F49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F40D837-D4EF-40B4-9312-5EFDF9F20F49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F40D837-D4EF-40B4-9312-5EFDF9F20F49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34D5CC78-8146-437C-A220-2963DDBE8E86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34D5CC78-8146-437C-A220-2963DDBE8E86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34D5CC78-8146-437C-A220-2963DDBE8E86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34D5CC78-8146-437C-A220-2963DDBE8E86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFF994BD-EE48-432E-B30E-76FA020B9331}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFF994BD-EE48-432E-B30E-76FA020B9331}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFF994BD-EE48-432E-B30E-76FA020B9331}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFF994BD-EE48-432E-B30E-76FA020B9331}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {70304E1E-8F63-47E4-A8D7-5CF2F2773806}
+	EndGlobalSection
+EndGlobal
