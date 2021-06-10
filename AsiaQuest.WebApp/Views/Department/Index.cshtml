@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+<h3>Department List</h3>
+<table id="tableDepartment" class="table table-striped table-bordered table-hover nowrap" style="width:100%">
+	<thead class="bg-primary">
+		<tr>
+			<th class="text-light">Department Name</th>
+			<th class="text-light">Modified Date</th>
+
+		</tr>
+	</thead>
+</table>
+<script>
+	$(document).ready(function () {
+		datatables.init();
+	});
+
+	var datatables = {
+		init: function () {
+			try {
+				var url = "/Department/GetDepartments	";
+				var datatable = $("#tableDepartment").DataTable({
+					ajax: url,
+					columns: [
+						{
+							data: "name"
+						},
+						{
+							data: "modifiedDateString"
+						},
+					],
+					scrollX: true
+				});
+			} catch (error) {
+				console.log(error);
+			}
+		}
+	}
+</script>

@@ -1,6 +1,13 @@
+using AsiaQuest.Abstracts;
+using AsiaQuest.BusinessObjects.Identities;
+using AsiaQuest.DataAccessLayer;
+using AsiaQuest.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.ResponseCompression;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -20,13 +27,53 @@ namespace AsiaQuest.WebApp
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddAutoMapper(typeof(Startup));
+            services.AddDbContext<CoreDbContext>(options =>
+            {
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"), sqlOptions =>
+                {
+                    sqlOptions.CommandTimeout(Convert.ToInt32(TimeSpan.FromMinutes(5).TotalSeconds));
+                });
+            });
+            services.AddHttpContextAccessor();
+            services.AddResponseCompression(options =>
+            {
+                options.EnableForHttps = true;
+                options.Providers.Add<GzipCompressionProvider>();
+            });
+
+            services.AddIdentity<AppUser, AppRole>(options =>
+            {
+                options.Password.RequireDigit = false;
+                options.Password.RequireLowercase = false;
+                options.Password.RequiredLength = 5;
+                options.Password.RequireUppercase = false;
+                options.Password.RequireNonAlphanumeric = false;
+            })
+              .AddUserManager<UserManager<AppUser>>()
+              .AddEntityFrameworkStores<CoreDbContext>()
+              .AddDefaultTokenProviders()
+              .AddRoles<AppRole>()
+              .AddRoleManager<RoleManager<AppRole>>();
+
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.LoginPath = "/Account/Login";
+                options.LogoutPath = "/Account/Logout";
+                options.SlidingExpiration = true;
+                options.ExpireTimeSpan = TimeSpan.FromHours(1);
+                options.AccessDeniedPath = "/Account/AccessDenied";
+            });
+            services.AddAuthentication(IdentityConstants.ApplicationScheme);
+            services.AddScoped<IAssetCategoryService, AssetCategoryService>();
+            services.AddScoped<IAssetService, AssetService>();
+            services.AddScoped<IDepartmentService, DepartmentService>();
+
             services.AddControllersWithViews();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -43,7 +90,7 @@ namespace AsiaQuest.WebApp
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

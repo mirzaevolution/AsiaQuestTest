@@ -9,11 +9,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsiaQuest.DataAccessLayer",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsiaQuest.Services", "AsiaQuest.Services\AsiaQuest.Services.csproj", "{584B473A-A928-46DB-90E0-96841363BD09}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsiaQuest.Repositories", "AsiaQuest.Repositories\AsiaQuest.Repositories.csproj", "{0F40D837-D4EF-40B4-9312-5EFDF9F20F49}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsiaQuest.DataTransferObjects", "AsiaQuest.DataTransferObjects\AsiaQuest.DataTransferObjects.csproj", "{34D5CC78-8146-437C-A220-2963DDBE8E86}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsiaQuest.BusinessObjects", "AsiaQuest.BusinessObjects\AsiaQuest.BusinessObjects.csproj", "{AFF994BD-EE48-432E-B30E-76FA020B9331}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsiaQuest.Abstracts", "AsiaQuest.Abstracts\AsiaQuest.Abstracts.csproj", "{05E08706-BABD-44F1-8582-8DD0DC6F0EAF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,10 +33,6 @@ Global
 		{584B473A-A928-46DB-90E0-96841363BD09}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{584B473A-A928-46DB-90E0-96841363BD09}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{584B473A-A928-46DB-90E0-96841363BD09}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0F40D837-D4EF-40B4-9312-5EFDF9F20F49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0F40D837-D4EF-40B4-9312-5EFDF9F20F49}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0F40D837-D4EF-40B4-9312-5EFDF9F20F49}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0F40D837-D4EF-40B4-9312-5EFDF9F20F49}.Release|Any CPU.Build.0 = Release|Any CPU
 		{34D5CC78-8146-437C-A220-2963DDBE8E86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{34D5CC78-8146-437C-A220-2963DDBE8E86}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{34D5CC78-8146-437C-A220-2963DDBE8E86}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -45,6 +41,10 @@ Global
 		{AFF994BD-EE48-432E-B30E-76FA020B9331}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AFF994BD-EE48-432E-B30E-76FA020B9331}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AFF994BD-EE48-432E-B30E-76FA020B9331}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05E08706-BABD-44F1-8582-8DD0DC6F0EAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05E08706-BABD-44F1-8582-8DD0DC6F0EAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05E08706-BABD-44F1-8582-8DD0DC6F0EAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05E08706-BABD-44F1-8582-8DD0DC6F0EAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,20 @@
+﻿using AsiaQuest.DataTransferObjects.Asssets;
+using System;
+using System.Collections.Generic;
+
+namespace AsiaQuest.DataTransferObjects.Masters
+{
+    public class DepartmentDto:BaseEntityDto
+    {
+        public string Id { get; set; } = Guid.NewGuid().ToString().ToUpper();
+        public string Name { get; set; }
+        public virtual List<AssetDto> Assets { get; set; } = new List<AssetDto>();
+        public string ModifiedDateString
+        {
+            get
+            {
+                return ModifiedDate.ToShortDateString();
+            }
+        }
+    }
+}
